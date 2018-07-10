@@ -1,0 +1,5 @@
+[run]
+source = taiga_contrib_protected,tests
+omit =
+    .tox/*
+    .venv/*
