@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="taiga-contrib-protected",
-    version=":versiontools:taiga_contrib_protected:",
+    version="18.8.0.dev0",
     description="The Taiga plugin for protected attachments",
     long_description="",
     keywords="taiga, download, protected",
