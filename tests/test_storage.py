@@ -6,19 +6,10 @@ class FileSystemStorageStub:
         return "http://protected.server.test/" + str(path)
 
 
-class TimestampSignerStub:
-    def __init__(self, *args, **kwargs):
-        pass
-
-    def sign(self, name):
-        return "x" * 40
-
-
 # Mock imported modules
 import sys
 
-sys.modules["django.conf"] = mock.Mock(settings=mock.Mock())
-sys.modules["django.core.signing"] = mock.Mock(TimestampSigner=TimestampSignerStub)
+sys.modules["django.conf"] = mock.Mock(settings=mock.Mock(SECRET_KEY="taiga-secret-key"))
 sys.modules["taiga.base.storage"] = mock.Mock(FileSystemStorage=FileSystemStorageStub)
 
 import taiga_contrib_protected.storage
