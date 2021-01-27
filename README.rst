@@ -20,6 +20,7 @@ This is a part of the system. To run it also needs:
     MEDIA_URL = "https://media-domain.example.com/"
     MEDIA_ROOT = "/path/to/media"
     DEFAULT_FILE_STORAGE = "taiga_contrib_protected.storage.ProtectedFileSystemStorage"
+    THUMBNAIL_DEFAULT_STORAGE = DEFAULT_FILE_STORAGE
 
 
 Vendoring
