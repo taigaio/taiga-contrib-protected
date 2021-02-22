@@ -1,9 +1,16 @@
 ## Taiga Contrib Protected
 
-This package implements an alternative storage system for taiga. This is a part of the system. To run it also needs:
+Taiga-contrib-protected is a plugin (installed in taiga-back) that offers an alternative storage system for Taiga. 
+It works in conjunction with taiga-protected service and requires a specific Nginx configuration.
+- Refer to the official [documentation](https://taigaio.github.io/taiga-doc/dist/setup-production.html#taiga-back) to 
+  install it.
+- Refer to the official [documentation](https://taigaio.github.io/taiga-doc/dist/setup-production.html#install-protected)
+  to install the service
+- Refer to the official [documentation](https://taigaio.github.io/taiga-doc/dist/setup-production.html#nginx) 
+  to configure Nginx
 
-- nginx with specific configuration
-- and taiga-protected service as the backend to validate requests.
+### Configuration
+The configuration variables for this plugin are:
 
 ```python
 #########################################
@@ -15,6 +22,8 @@ MEDIA_ROOT = "/path/to/media"
 DEFAULT_FILE_STORAGE = "taiga_contrib_protected.storage.ProtectedFileSystemStorage"
 THUMBNAIL_DEFAULT_STORAGE = DEFAULT_FILE_STORAGE
 ```
+
+They are located in `settings/config.py.prod.example`
 
 ## Vendoring
 
@@ -29,9 +38,12 @@ rm -rf taiga_contrib_protected/_vendor/*.dist-info
 
 Currently, we have authored three main documentation hubs:
 
-- **[API](https://taigaio.github.io/taiga-doc/dist/api.html)**: Our API documentation and reference for developing from Taiga API.
-- **[Documentation](https://taigaio.github.io/taiga-doc/dist/)**: If you need to install Taiga on your own server, this is the place to find some guides.
-- **[Taiga Resources](https://resources.taiga.io)**: This page is intended to be the support reference page for the users.
+- **[API](https://taigaio.github.io/taiga-doc/dist/api.html)**: Our API documentation and reference for developing from 
+  Taiga API.
+- **[Documentation](https://taigaio.github.io/taiga-doc/dist/)**: If you need to install Taiga on your own server, 
+  this is the place to find some guides.
+- **[Taiga Resources](https://resources.taiga.io)**: This page is intended to be the support reference page for the 
+  users.
 
 ## Bug reports
 
