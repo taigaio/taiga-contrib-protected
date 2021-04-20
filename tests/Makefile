@@ -8,7 +8,7 @@ clean:
 
 .PHONY: clone
 clone:
-	git clone  --depth=1 https://github.com/taigaio/taiga-back.git taiga-back
+	git clone  --depth=1 https://github.com/kaleidos-ventures/taiga-back.git taiga-back
 	cd taiga-back && virtualenv -p python3.6 .venv
 	cd taiga-back && .venv/bin/pip install --upgrade pip wheel setuptools
 	cd taiga-back && .venv/bin/pip install -r requirements.txt
