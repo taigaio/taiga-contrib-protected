@@ -5,13 +5,12 @@
 #
 # Copyright (c) 2021-present Kaleidos Ventures SL
 
-#!/usr/bin/env python3
-
 from setuptools import setup, find_packages
+import versiontools_support
 
 setup(
     name="taiga-contrib-protected",
-    version="18.8.0.dev0",
+    version = ":versiontools:taiga_contrib_protected:",
     description="The Taiga plugin for protected attachments",
     long_description="",
     keywords="taiga, download, protected",
@@ -22,6 +21,9 @@ setup(
     include_package_data=True,
     packages=find_packages(),
     install_requires=[],
+    setup_requires = [
+        'versiontools >= 1.9',
+    ],
     classifiers=[
         "Programming Language :: Python",
         "Development Status :: 4 - Beta",
